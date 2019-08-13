@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:gainsboro;
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .sign {
+            width: 1200px;
+            height: 800px;
+        
+            margin: auto;
+            position: relative;
+          
+        }
+
+        .login {
+            width: 300px;
+            padding:10px;
+            border: 1px solid ghostwhite;
+            position: absolute;
+            top: 180px;
+            right: 100px;
+            text-align: center;
+            font-size: 16px;
+     
+
+        }
+
+        .login a {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 20px;
+            font-size:18px;
+       
+        }
+
+        #login {
+       
+            width: 300px;
+            margin: auto;
+            display: none;
+        }
+        #login input{ margin-top:20px;}
+          #login button{
+            margin-top: 30px;
+            width:300px;
+            padding:10px;
+            background: ghostwhite;
+          }
+
+        #sign {
+      
+            margin: 30px auto;
+        }
+        #sign input{
+            margin-top:30px;
+        }
+        #sign button{
+            margin-top: 30px;
+            width:300px;
+            padding:10px;
+            background: ghostwhite;
+
+        }
+    </style>
+</head>
+
+<body>
+<header id="header"></header>
+    <div class="sign">
+        <div class="login">
+            <a  href="javascript:;" onclick="sign_in()">登录</a>
+            <a  href="javascript:;" onclick="sign_on()">注册</a>
+            <div id="login">
+             
+                用户账号:<INPUT TYPE="TEXT" id="uname" size="18" placeholder="请输入用户名(5~20位)" onblur="notuname_show()"><br>
+                <span id="uname_msg"></span><br>
+                用户电话:<INPUT TYPE="TEXT" id="phone" size="18" placeholder="请输入手机号码" onblur="notphone_show()"><br>
+                <span id="phone_msg"></span><br>
+                用户邮箱:<input type="text" id="email" size="18" placeholder="请输入邮箱" onblur="notemail_show()"><br>
+                <span id="email_msg"></span><br>
+                用户密码:<INPUT TYPE="TEXT" size="18" id="upwd" placeholder="请设定密码(6~12位)" onblur="notupwd_show()"><br>
+                <span id="upwd_msg"></span>
+                <br>
+                重复密码:<INPUT TYPE="TEXT" size="18" id="cpwd" placeholder="请重复密码" onblur="notcpwd_show()"><br>
+                <span id="cpwd_msg"></span><br>
+                <button onclick="fn()">注册 </button><span id="n"></span>
+            </div>
+            <div id="sign">
+                <em style="clear: both"></em>
+                用户账号：<input type="text" placeholder="请输入账号" id="lname"><br>
+                用户密码：<input type="text" placeholder="请输入账号" id="lpwsd"><br>
+                <button onclick="sn()">登录</button>
+
+
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="../lib/jquery/jquery-1.11.3.js"></script>
+    <script src="../style/js/login.js">
+    
+        // 登录s
+    </script>
+    <script src="../style/js/footer.js"></script>
+    <script src="../style/js/header.js"></script>
+</body>
+
+</html>

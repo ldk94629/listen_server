@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/css/common.css">
+    <link rel="stylesheet" href="../style/css/details.css">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <header id="header"></header>
+    <section  >
+        <div class="sc" id="app">
+        <div class="sc-l">
+            <div></div>
+            <div class="sc-l-t"  >
+                <div id="sc"  >
+                    <img :src="srcs">
+                </div>
+            </div>
+            <div class="sc-l-b"  >
+                <span v-if="details.length>4"></span>
+                <ul >
+                    <li    v-for="(p,i) of details" :key="i"><a href="jscascript:;" @click="sccc(i)">
+                            <img :src="p.pic" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <span></span>
+            </div>
+        </div>
+        <div class="sc-r fr" >
+            <h6>看了又看</h6>
+            <ul >
+
+                <li v-for="(p,i) of detail" :key="i">
+                    <a :href="'../index/details.html?lid='+ p.lid ">
+                        <img :src="p.pic" alt="">
+                        <span v-text="p.title"></span>
+                    </a>
+                    <p>RMB:<i v-text="p.price" >.00</i></p>
+                </li>
+              
+            </ul>
+        </div>
+        <div class="sc-c">
+            <h1 v-text="product.title"></h1>
+            <div class="sc-cd">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae placeat cupiditate, animi ut
+                    laudantium, esse omnis culpa rem tempore incidunt, dolores quo mollitia! Sit dolorem, sunt quidem
+                    eligendi eaque veniam?
+                </p>
+            </div>
+            <div class="sc-cp">
+                <p class="fl">RMB:<i v-text="product.price"></i></p>
+
+                <em class="clear"></em>
+            </div>
+            <div class="sc-c-info">
+                <p class="fl"><span>销量:<i  v-text="product.xl"></i></span></p>
+                <p class="fl"><span>评价:<i v-text="product.PJ"></i></span></p>
+                <p class="fl"><span>积分:<i v-text="product.JF"></i></span></p>
+                <em class="clear"></em>
+            </div>
+            <div class="sc-cs">
+                   <p > 分类: <i v-text="fname"></i></p>
+            </div>
+            <div class="sc-c-press">
+                <p>数量:
+                    <span v-text="p"></span>
+                    <button @click="reduce">-</button>
+                    <button @click="add">+</button>
+                </p>
+            </div>
+            <div class="sc-c-action">
+                <a href="javascript:;" @click="addBuy">立即购买</a>
+                <a href="javascript:;" @click="addCart" >加入购物车</a>
+            </div>
+        </div>
+        <div class="sc-context">
+            <ul >
+                <li ><img :src="pics.dimg1" alt=""></li>
+                <li ><img :src="pics.dimg2" alt=""></li>
+                <li ><img :src="pics.dimg3" alt=""></li>
+            </ul>
+        </div>
+    </div>
+        <div class="clear">   </div>
+    </section>
+    <footer id="footer"></footer>
+   
+    <script src="../lib/jquery/jquery-1.11.3.js"></script>
+    <script src="../style/js/vue.js"></script>
+    <script src="../style/js/axiosmin.js"></script>
+     <script src="../style/js/header.js"></script>
+    <script src="../style/js/footer.js"></script> 
+    <script src="../style/js/details.js"></script>
+</body>
+
+</html>

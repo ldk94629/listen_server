@@ -1,0 +1,23 @@
+.fl{float:left;}
+.fr{float:right;}
+.clear{
+    clear:both;
+    display:block;
+    float: none !important;
+    line-height: 0;
+    overflow: hidden;
+    font-size: 0;
+    margin: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+.clear:after{
+    content: '';
+    content: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+} 

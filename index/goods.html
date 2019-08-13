@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/css/common.css">
+    <link rel="stylesheet" href="../style/css/goods.css">
+    <style>   
+    </style>
+</head>
+<body>
+    <header id="header"></header>
+    <section id="pdd">
+        <div v-for="(p,i) of ps" :key="i" >
+        <div class="grid">
+            <div class="content_pro1">
+                <div class="content_pro1_1">
+                        <a :href="'../index/details.html?lid='+ p.lid ">
+                        <img :src="p.pic"
+                            width="400" alt="1MORE Stylish 时尚真无线耳机-I（黑）">
+                    </a>
+                </div>
+                <div class="content_pro1_fx">
+                    <div class="content_pro1_fx1">
+                        分享
+                    </div>
+                    <div class="content_pro1_fx2">
+                        <a href="javascript:void(0);">
+                            <img src="https://static0.1more.com/s/images/xl.png" alt="1MORE Stylish 时尚真无线耳机-I（黑）">
+                        </a>
+                    </div>
+                </div>
+                <div class="content_pro1_2">
+                    <div class="content_pro1_3" v-text="p.title"> </div>
+                </div>
+                <div class="content_pro1_5">
+                </div>
+                <div class="content_pro1_6">
+                    <div class="new_price_pc" style="width: 100%;">
+                        <span>RMB:<i v-text="`${p.price.toFixed(2)}`"></i></span>
+                       
+                        <div class="content_pro1_4">
+                            <a href="#" title="加入购物车">
+                                <img src="https://static0.1more.com/s/images/product0_16.jpg"
+                                    onclick="javascript:window.location.href='/product/show-752-1.html'">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content_pro1_9" style="float:left; clear: both;">
+                        <a href="javascript:void(0)" onclick="addPrise('752',8)">
+                            <img src="https://static0.1more.com/s/images/product0_21.jpg">
+                        </a>
+                    </div>
+                    <div class="content_pro1_10" style="float:left;">（<span id="Praise_752">8</span>）</div>
+                </div>
+            </div>
+            <div class="content_pro2">
+                <img src="https://static0.1more.com/s/images/product2_06.jpg">
+            </div>
+        </div>
+        
+    </div>
+    <em class="clear"></em>
+    </section>
+    <footer id="footer"></footer>
+    <script src="../lib/jquery/jquery-1.11.3.js"></script>
+    <script src="../style/js/vue.js"></script>
+    <script src="../style/js/axiosmin.js "></script>
+    <script src="../style/js/goods.js"></script>
+    <script src="../style/js/header.js"></script>
+    <script src="../style/js/footer.js"></script>
+</body>
+</html>

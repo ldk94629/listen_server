@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  </style>
+  <style scoped>
+    .cart {
+      width: 1200px;
+      margin: auto;
+    }
+
+    .titlebar {
+      height: 40px;
+      font-size: 18px;
+      color: #666;
+    }
+
+    .tab {
+      width: 100%;
+      height: 45px;
+      background: #F4F4F5;
+      color: #555;
+      border: 1px solid #E4E4E4;
+      cursor: pointer;
+    }
+
+    .tab-item {
+      width: 100%;
+      height: 100px;
+    }
+
+    .tab-item .input-sp {
+      float: left;
+      margin: 28px 10px 0 5px;
+    }
+
+    .tab-item td img {
+      width: 78px;
+      height: 78px;
+    }
+
+    .cart-item {
+      border-bottom: 1px dotted #333;
+    }
+
+    .price {
+      margin-left: 25px;
+    }
+
+    .l,
+    .r {
+      text-align: center;
+      line-height: 30px;
+      width: 30px;
+      height: 30px;
+      color: #555;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .l {
+      display: block;
+      float: left;
+      border-radius: 0 3px 3px 0;
+      border-right: 1px solid #CFCFCF;
+    }
+
+    .r {
+      border-radius: 3px 0px 0px 3px;
+      border-left: 1px solid #CFCFCF;
+    }
+
+    .number {
+      display: inline-block;
+      width: 102px;
+      height: 30px;
+      overflow: hidden;
+      border-radius: 3px;
+      border: 1px solid #CFCFCF;
+      background-color: #FFF;
+    }
+
+    .sum {
+      border: 0;
+      line-height: 30px;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      float: left;
+    }
+
+    .seect-last {
+      width: 1200px;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .select-left,
+    .select-right {
+      width: 380px;
+      height: 60px;
+      line-height: 60px;
+      float: left;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .select-right {
+      float: right;
+    }
+
+    .select-right span em {
+      color: #ff0000;
+      font-size: 20px;
+    }
+
+    .select-right span {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .sel {
+      width: 80px;
+      height: 60px;
+      float: left;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .selectbtn a {
+      float: left;
+      display: block;
+      margin-right: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .set {
+      background: crimson;
+      clear: both;
+      float: right;
+      color: #E4E4E4;
+    }
+  </style>
+</head>
+<header id="header"></header>
+
+<body>
+  <div id="add">
+    <div class="cart">
+      <div class="titlebar">全部商品</div>
+      <table class="tab">
+        <tr class="taball">
+          <td width="12%">
+            <div class="selectAll">
+              <input class="qx" type="checkbox" @change="selectAll" v-model="cc"/>
+               <span>全选</span>
+              </div>
+          </td>
+          <td width="38%" algin="left">商品</td>
+          <td width="12%">单价</td>
+          <td width="15%">数量</td>
+          <td width="12%">小计</td>
+          <td width="11%">操作</td>
+        </tr>
+      </table>
+      <div class="cart-item">
+        <table class="tab-item" v-for="(item,i) of list" :key="item.iid">
+          <tr>
+            <td width="12%">
+              <input class="input-sp" type="checkbox" v-model="item.is_checked" />
+              <img :src="item.url_img" alt="">
+            </td>
+            <td width="38%" algin="left">
+              <a href="#">{{item.title}}</a>
+            </td>
+            <td width="12%">
+              ￥{{item.v_price}}
+            </td>
+            <td width="15%">
+              <div class="number">
+                {{item.count}}
+              </div>
+            </td>
+            <td width="12%">{{item.v_price*item.count}}</td>
+            <td width="11%"> <button :data-id="item.iid" @click="deletep">删除</button> </td>
+          </tr>
+        </table>
+      </div>
+      <div v-if="0" class="empty-wrap">
+        你还没有添加任何商品哦~
+      </div>
+      <div class="select-last">
+        <div class="select-left">
+          <div class="sel">
+            <input type="checkbox" class="qx" @change="selectAll" v-model="cc" />
+            <span>全选</span>
+          </div>
+          <!--删除选中商品-->
+          <div class="selectbtn">
+            <a>
+              删除选中商品
+            </a>
+            <a href="#">加入我的收藏</a>
+          </div>
+        </div>
+        <div class="select-right">
+          <span>已选择<em></em>件商品</span>
+          <span>总价（不含运费）:￥<em>{{sum}}</em></span>
+        </div>
+      </div>
+      <button class="set" @click="alerts">去结算</button>
+    </div>
+  </div>
+  <em style="clear: both;display:block;"></em>
+  <footer id="footer
+  "></footer>
+</body>
+<script src="../style/js/vue.js"></script>
+<script src="../lib/jquery/jquery-1.11.3.js"></script>
+<script src="../style/js/axiosmin.js"></script>
+<script src="../style/js/shopcart.js"></script>
+<script src="../style/js/header.js"></script>
+<script src="../style/js/footer.js"></script>
+
+</html>

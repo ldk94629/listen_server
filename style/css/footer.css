@@ -1,0 +1,250 @@
+	.footerbtm {
+	    padding-top: 10px;
+	}
+
+	.footerbtm .select {
+       
+	    display: block;
+	    float: right;
+	    width: 160px;
+	    height: 40px;
+	    position: relative;}
+	   
+
+	.footerbtm .main_tar {
+	    position: absolute;
+	    font-size: 14px;
+	    line-height: 38px;
+	    color: #333;
+	    display: inline-block;
+	    width: 146px;
+	    height: 38px;
+	    background-repeat: no-repeat;
+	    background-position: 92% 50%;
+	    background-image: url("../../image/header/sg_10.png");
+	    cursor: pointer;
+	    z-index: 3;
+	    padding-left: 14px;
+	    border: 1px solid #dfdfdf;
+	    background-color: #fff
+	}
+
+	.footerbtm .main_content {
+	    display: none;
+	    background-color: #fff;
+	    border: 1px solid #dfdfdf;
+	    border-bottom: 0;
+	    position: absolute;
+	    bottom: 29px;
+	    z-index: 5;
+	    left: 0
+	}
+
+	.footerbtm .main_content li {
+	    width: 146px;
+	    font-size: 14px;
+	    line-height: 30px;
+	    padding-left: 14px;
+	}
+
+	.footerbtm .main_content li a {
+	    width: 140px;
+	    display: block;
+	    color: #6d6d6d;
+	    height: 30px;
+	    line-height: 30px;
+	    font-size: 14px;
+	}
+
+	.footerbtm .main_content li a:hover {
+	    width: 140px;
+	    color: #ff4a00;
+	    font-size: 14px;
+	}
+
+	.footerbtm .select:hover .main_tar {
+	    background-color: #fff;
+	    border: 1px solid #dfdfdf
+	}
+
+	.footerbtm .select:hover .main_content {
+	    display: block
+	}
+
+
+
+	.foot {
+	    margin: 0;
+	    padding: 0;
+	    background: #e8e8e8;
+	}
+
+	.foot2 {
+	    margin: 0 auto;
+	    padding: 50px 0 0 0;
+	    margin-bottom: 50px;
+	    position: relative;
+	    height: 150 !important;
+	    height: 150;
+	    min-height: 150px;
+	}
+
+	.foot2_1 {
+	    width: 70px;
+	    float: left;
+	    position: absolute;
+	    top: 80px;
+	    left: 30px;
+	}
+
+	.foot2s_1 {
+	    width: 70px;
+	    float: left;
+	    position: absolute;
+	    top: 68px;
+	    left: 95px;
+	    display: none;
+	}
+
+	.foot2s_1 img {
+	    width: 80px;
+	    height: 80px;
+	}
+
+	.foot3t {
+	    width: 1200px;
+	    margin: 0 auto;
+	}
+
+	.foot3 {
+	    width: 900px;
+	    float: left;
+	    padding: 0px 0px 0px 5%;
+	}
+
+	.foot3 ul {
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.foot3 ul li {
+	    margin: 0;
+	    padding: 0;
+	    list-style-type: none;
+	    float: left;
+	    width: 23%;
+	    text-align: center;
+	}
+
+	.foot3_1 {
+	    font-size: 16px;
+	    color: #1b1b1b;
+	    height: 35px;
+	}
+
+
+
+	.foot3_2 ul {
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.foot3_2 ul li {
+	    margin: 0;
+	    padding: 0;
+	    list-style-type: none;
+	    float: left;
+	    width: 100%;
+	    height: 28px;
+	}
+
+	.foot3_2 ul li a {
+	    color: #434343;
+	    font-size: 12px;
+	}
+
+	.foot3_2 ul li a:hover {
+	    color: #ff3a1e;
+	    font-size: 12px;
+	}
+
+	.foot4 {
+	    width: 170px;
+	    float: left;
+	}
+
+	.foot4_1 {
+	    width: 100%;
+	    text-align: center;
+	    height: 22px;
+	    color: #777;
+	    font-size: 16px;
+	}
+
+	.foot4_2 {
+	    width: 100%;
+	    text-align: center;
+	    height: 27px;
+	    color: #0d0d0d;
+	    font-size: 18px;
+	}
+
+	.foot4_3 {
+	    margin: 7px 0 0 0;
+	    height: 28px;
+	}
+
+	.foot4_3 a {
+	    background: none repeat scroll 0% 0% #FF5138;
+	    display: block;
+	    color: #FFF;
+	    width: 80px;
+	    height: 25px;
+	    line-height: 23px;
+	    text-align: center;
+	    font-size: 16px;
+	    margin: 0px auto;
+	}
+
+	.foot4_4 {
+	    height: 34px;
+	    width: 140px;
+	    border-bottom: 1px solid #ccc;
+	    border-top: 1px solid #ccc;
+	    margin: 7px 0 0 20px;
+	}
+
+	.foot4_5 {
+	    height: 20px;
+	    width: 56px;
+	    margin: 6px 0 0 42px;
+	    float: left;
+	    color: #666;
+	    font-size: 14px;
+	}
+
+	.foot4_6 {
+	    height: 20px;
+	    width: 10px;
+	    margin: 10px 0 0 23px;
+	    float: left;
+	}
+
+	.foot5 {
+	    width: auto;
+	    border-top: 1px solid #ccc;
+	}
+
+	.foot5_1 {
+	    margin: 0 auto;
+	    width: 1200px;
+	    text-align: center;
+	    color: #484848;
+	    font-size: 12px;
+	    padding: 25px 0 30px 0;
+	}
+
+	.foot5_1 a {
+	    color: #484848;
+	    font-size: 12px;
+	}
